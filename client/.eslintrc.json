@@ -1,0 +1,36 @@
+{
+  "env": { "jest": true },
+  "extends": ["airbnb", "airbnb-typescript", "prettier"],
+  "ignorePatterns": ["dist/**", "src/generated/*"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true },
+    "sourceType": "module",
+    "project": ["./packages/client-demo/tsconfig.json"]
+  },
+  "plugins": ["@typescript-eslint", "import", "jest", "testing-library"],
+  "root": true,
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "jest/consistent-test-it": ["error", { "fn": "test", "withinDescribe": "test" }],
+    "jest/no-deprecated-functions": "error",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "warn",
+    "jest/no-test-prefixes": "error",
+    "jest/prefer-to-have-length": "warn",
+    "testing-library/no-await-sync-events": "error",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debugging-utils": "error",
+    "testing-library/prefer-user-event": "error",
+    "testing-library/prefer-wait-for": "error",
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": ["error", { "td": ["rowheader"] }],
+    "no-underscore-dangle": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/no-redundant-roles": "off",
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "curly": "error"
+  }
+}
