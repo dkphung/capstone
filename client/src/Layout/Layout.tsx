@@ -88,7 +88,7 @@ export default function Layout(props: PropsWithChildren<{}>) {
         </div>
 
         <main className="-mt-32 flex flex-col flex-1">
-          <div className="bg-white rounded-lg shadow p-6 flex-1 mx-8">{props.children}</div>
+          <div className="bg-white rounded-lg shadow flex-1 mx-8 overflow-clip">{props.children}</div>
         </main>
       </div>
     </>
