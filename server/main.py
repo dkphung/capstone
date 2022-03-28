@@ -61,5 +61,3 @@ app = FastAPI()
 
 app.mount("/graphql", GraphQL(schema, debug=True))
 app.mount("/", StaticFiles(directory="dist", html=True), name="static")
-
-# uvicorn main:app --reload
