@@ -1,7 +1,54 @@
 schema {
   query: Query
+  mutation: Mutation
 }
 
 type Query {
   hello: String!
+}
+
+type Mutation {
+  prediction(
+    age: Int!
+    restingBloodPressure: Int!
+    cholesterol: Int!
+    fastingBloodSugar: Int!
+    maxHeartRate: Int!
+    oldpeak: Float!
+    sex: Sex!
+    chestPainType: ChestPainType!
+    restingECG: RestingECG!
+    exerciseAngina: YESNO!
+    stSlope: ST_Slope!
+  ): Int!
+}
+
+enum Sex {
+  FEMALE
+  MALE
+}
+
+enum ChestPainType {
+  NONE
+  ASY
+  ATA
+  NAP
+  TA
+}
+
+enum RestingECG {
+  NORMAL
+  LVH
+  ST
+}
+
+enum YESNO {
+  YES
+  NO
+}
+
+enum ST_Slope {
+  FLAT
+  DOWN
+  UP
 }
