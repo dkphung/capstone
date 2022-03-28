@@ -8,7 +8,7 @@ import App from './App';
 import Layout from './Layout/Layout';
 
 const client = createClient({
-  url: 'http://127.0.0.1:8000/graphql/',
+  url: '/graphql/',
 });
 
 ReactDOM.render(
